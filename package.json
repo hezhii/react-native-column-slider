@@ -1,0 +1,32 @@
+{
+  "name": "react-native-column-slider",
+  "version": "1.0.0",
+  "description": "A pure JavaScript Slider component, UI similar to iPhone brightness regulator.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hezhii/react-native-column-slider"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "slider",
+    "column",
+    "vertical",
+    "iphone"
+  ],
+  "author": {
+    "name": "biu",
+    "email": "hezhou920@gmail.com",
+    "url": "https://www.whezh.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hezhii/react-native-column-slider/issues"
+  },
+  "homepage": "https://github.com/hezhii/react-native-column-slider#readme"
+}
+
