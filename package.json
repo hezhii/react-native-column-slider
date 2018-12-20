@@ -27,6 +27,12 @@
   "bugs": {
     "url": "https://github.com/hezhii/react-native-column-slider/issues"
   },
-  "homepage": "https://github.com/hezhii/react-native-column-slider#readme"
+  "homepage": "https://github.com/hezhii/react-native-column-slider#readme",
+  "devDependencies": {
+    "prop-types": "^15.6.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
 }
-
