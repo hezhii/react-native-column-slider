@@ -1,0 +1,6 @@
+.github
+.idea
+.DS_Store
+example
+.gitignore
+package-lock.json
