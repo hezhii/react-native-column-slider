@@ -76,6 +76,11 @@ export default class ColumnSlider extends React.PureComponent {
      * The with of component. Default value is 100
      */
     width: PropTypes.number,
+
+    /**
+     * The suffix of the value.
+     */
+    suffix: PropTypes.string,
   };
 
   static defaultProps = {
@@ -196,6 +201,7 @@ export default class ColumnSlider extends React.PureComponent {
       icon,
       style,
       textStyle,
+      suffix,
     } = this.props;
     const { value } = this.state;
 
@@ -210,7 +216,7 @@ export default class ColumnSlider extends React.PureComponent {
 
     return (
         <View style={[styles.slider, style]}>
-          <Text style={[styles.text, textStyle]}>{value}</Text>
+          <Text style={[styles.text, textStyle]}>{value}{suffix}</Text>
           <View style={[styles.shadow, { backgroundColor: maximumTrackTintColor, width }]}>
             <View style={outerStyle} {...this._panResponder.panHandlers}>
               <View style={innerStyle} />

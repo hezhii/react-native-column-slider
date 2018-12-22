@@ -15,6 +15,7 @@ export default class App extends React.PureComponent {
               minimumTrackTintColor='#ffc069'
               maximumTrackTintColor='#fff'
               textStyle={{ color: '#ffc069' }}
+              suffix="℃"
           />
         </View>
     );
