@@ -81,6 +81,11 @@ export default class ColumnSlider extends React.PureComponent {
      * The suffix of the value.
      */
     suffix: PropTypes.string,
+
+    /**
+     * The border radius of component.
+     */
+    borderRadius: PropTypes.number,
   };
 
   static defaultProps = {
@@ -90,6 +95,7 @@ export default class ColumnSlider extends React.PureComponent {
     step: 0,
     minimumTrackTintColor: '#fff',
     maximumTrackTintColor: '#eee',
+    borderRadius: 0,
   };
 
   constructor(props) {
@@ -202,12 +208,13 @@ export default class ColumnSlider extends React.PureComponent {
       style,
       textStyle,
       suffix,
+      borderRadius,
     } = this.props;
     const { value } = this.state;
 
     const outerStyle = [
       styles.outer,
-      { height, backgroundColor: maximumTrackTintColor },
+      { height, backgroundColor: maximumTrackTintColor, borderRadius },
     ];
     const innerStyle = [
       styles.inner,
@@ -217,7 +224,7 @@ export default class ColumnSlider extends React.PureComponent {
     return (
         <View style={[styles.slider, style]}>
           <Text style={[styles.text, textStyle]}>{value}{suffix}</Text>
-          <View style={[styles.shadow, { backgroundColor: maximumTrackTintColor, width }]}>
+          <View style={[styles.shadow, { backgroundColor: maximumTrackTintColor, width, borderRadius }]}>
             <View style={outerStyle} {...this._panResponder.panHandlers}>
               <View style={innerStyle} />
             </View>
@@ -244,7 +251,6 @@ const styles = StyleSheet.create({
     color: '#1890ff',
   },
   shadow: {
-    borderRadius: 50,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 4,
@@ -252,7 +258,6 @@ const styles = StyleSheet.create({
     elevation: 4,
   },
   outer: {
-    borderRadius: 50,
     overflow: 'hidden',
   },
   inner: {

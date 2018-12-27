@@ -62,3 +62,4 @@ const styles = StyleSheet.create({
 |icon|node|null|The bottom icon.|
 |width|number|100|The with of component.|
 |suffix|string|null|The suffix of the value.|
+|borderRadius|number|0|The border radius of component.|
